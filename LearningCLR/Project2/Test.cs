@@ -1,4 +1,7 @@
-﻿using System;
+﻿// compile this file and view this type in ILDASM.EXE
+// everything is converted to either a method or a field
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
