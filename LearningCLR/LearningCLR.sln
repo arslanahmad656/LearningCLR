@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NonProject", "NonProject", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compiling Code", "Compiling Code", "{E0283EC4-601A-4D46-9A44-2D833FC6B2D3}"
 	ProjectSection(SolutionItems) = preProject
+		compilingcode.rsp = compilingcode.rsp
 		CompilingCodeEx.cs = CompilingCodeEx.cs
 	EndProjectSection
 EndProject
