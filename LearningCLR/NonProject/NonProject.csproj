@@ -50,6 +50,7 @@
     <None Include="Examples\CompilingCode\compilingcode.rsp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\CompilingCode\CompilingCodeEx.exe" />
     <Content Include="Examples\CompilingCode\Notes.txt" />
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\conflict1.dll" />
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\conflict2.dll" />
