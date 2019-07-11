@@ -7,6 +7,7 @@ namespace LearningClr.NonProject.CompilingCode
         public static void Main()
         {
             Console.WriteLine("Compiling code example");
+            Console.ReadKey();
         }
     }
 }
