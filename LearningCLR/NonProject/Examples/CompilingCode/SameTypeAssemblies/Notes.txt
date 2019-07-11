@@ -1,0 +1,7 @@
+﻿conflict1.dll and conflict2.dll both contains the same type:
+
+ConflictingAssemblies.ConflictingAssembly
+
+both types have one method each: public static string Method()
+
+The purpose of doing so is to study the behaviour of csc.exe when it encounters a conflict. Create a class file and refer one of the two types but specify both dll file as reference to csc.exe. Since there are two libraries defining the same type, how would csc behave?
