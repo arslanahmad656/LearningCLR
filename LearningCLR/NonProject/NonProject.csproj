@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\AddingResources\Executable.cs" />
     <Compile Include="Examples\CompilingCode\CompilingCodeEx.cs" />
     <Compile Include="Examples\CompilingCode\ConflictTest.cs" />
     <Compile Include="Examples\CompilingCode\SameTypeAssemblies\ConflictingAssembly1.cs" />
