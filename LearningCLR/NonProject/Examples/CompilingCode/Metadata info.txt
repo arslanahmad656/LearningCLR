@@ -87,9 +87,13 @@
 	3.3.2: Index to an entry in FileDef table (which enables to locate this resource file name in FileDef table)
 	3.3.3: Offset within the PE if the resource is an embedded resource. (Also, if the resouce is not a standalone file, the content is a stream contained in PE.)
 	3.3.4: Flag (public if resource is visible outside the assembly otherwise private)
-3.4: ExportedTypesDef: Contains one entry for each exported from all of the modules contained within the assembly. Each entry contains:
+3.4: ExportedTypesDef: Contains one entry for each exported from all of the modules contained within the assembly.
+		               This table does not include the types exported from the module containing the manifest (for saving space).
+					   Each entry contains:
 	3.4.1: An index to FileDef table pointing to the assembly containing this type.
 	3.4.2: An index to TypeDef table pointing to the type definition.
+3.5: AssemblyRef: Contains one entry for each assembly referred by the assembly (this table is not same as the AssemblyRef table of a module). Each entry contains:
+	3.5.1: Fully qualified name of assembly (simple name, version info, culture, and public key token)
 
 =================================================================================================================================================================================================================
 To view the assembly metadata, open the assembly in ildasm and go to View > MetaInfo > Show! (CTRL + M)
