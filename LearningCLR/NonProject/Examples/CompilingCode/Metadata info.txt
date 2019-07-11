@@ -9,7 +9,7 @@
  - Metadata: Contains several tables most of which fall in one of the following categories:
 				- Definition tables (contains entries for the entities, e.g. methods and types, defined by the code being compiled)
 				- Reference tables (contains the entries for the entities, e.g. assemblies, methods etc., being referred to by the code being compiled)
-				- Manifest tables
+				- Manifest tables (contains the entries for the files, e.g. modules, resources, contained in the assembly)
  - IL Code:	The compiled IL (Intermediate Language) code. This code is compiled to native on the fly by JIT compiler.
 
  *** NOTE: It does not matter how many references (using /r switch) are provided to the compiler, the entries in tables are created only when required.
@@ -20,7 +20,7 @@
  METADATA TABLES
  ---------------
 
- 1. Definition Tables: Contains the following types of entries:
+ 1. Definition Tables: Contains the following types of tables:
 
  1.1 ModuleDef: Contains one entry for the module. It contains:
 		1.1.1: Module name's (name and extension, without path)
@@ -53,7 +53,7 @@
 		1.7.2: Flags (public, private etc.)
 
 
-2. Reference Tables: Contains following types of entries:
+2. Reference Tables: Contains following types of Tables:
 
 2.1: AssemblyRef: Contains one entry for each assembly referred by the module. Each entry contains:
 	2.1.1: Fully qualified name of assembly (simple name, version info, culture, and public key token)
@@ -73,7 +73,27 @@
 	2.4.1: Member info (name, type)
 	2.4.2: Index to TypeRef entry with which this member belongs
 
-3. Manifest Tables: TO BE CONTINUED...
+3. Manifest Tables: Contains following types of tables
+
+3.1: AssemblyDef: Contains a single entry if the module represents an assembly (i.e. if it keeps a manifest). This entry contains
+	3.1.1: Full name of the assembly (simple name, version, culture, public key token)
+3.2: FileDef: Contains one entry for each resource file and PE that is part of the assembly (except for the file containing the manifest because this file's info is available in AssemblyDef table).
+			  This table is empty if the assembly consists of its own file. Each entry of this table includes:
+	3.2.1: File name and extension (without path)
+	3.2.2: Flags
+	3.2.3: Hash value
+3.3: ManifestResourceDef: Contains one entry for each resource file that is the part of assembly. Each entry contains:
+	3.3.1: Name of the resource (but not the file name with extension)
+	3.3.2: Index to an entry in FileDef table (which enables to locate this resource file name in FileDef table)
+	3.3.3: Offset within the PE if the resource is an embedded resource. (Also, if the resouce is not a standalone file, the content is a stream contained in PE.)
+	3.3.4: Flag (public if resource is visible outside the assembly otherwise private)
+3.4: ExportedTypesDef: Contains one entry for each exported from all of the modules contained within the assembly. Each entry contains:
+	3.4.1: An index to FileDef table pointing to the assembly containing this type.
+	3.4.2: An index to TypeDef table pointing to the type definition.
+
+=================================================================================================================================================================================================================
+To view the assembly metadata, open the assembly in ildasm and go to View > MetaInfo > Show! (CTRL + M)
+To view the assembly stats, open the assembly in ildasm and go to View > Statistics
 
 =================================================================================================================================================================================================================
 For more information:
