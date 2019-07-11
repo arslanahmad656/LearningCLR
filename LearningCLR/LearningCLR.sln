@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetVersion", "DotNetVers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project2", "Project2\Project2.csproj", "{F57EBFBE-801B-4A52-86CB-600EA71B5EA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{50AFD8E3-6523-440C-904B-FE56B4423C61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compiling Code", "Compiling Code", "{726E0B80-7D5A-468F-B41A-CB85C5AA5F93}"
+	ProjectSection(SolutionItems) = preProject
+		Examples\Compiling Code\compilingcode.rsp = Examples\Compiling Code\compilingcode.rsp
+		Examples\Compiling Code\CompilingCodeEx.cs = Examples\Compiling Code\CompilingCodeEx.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{726E0B80-7D5A-468F-B41A-CB85C5AA5F93} = {50AFD8E3-6523-440C-904B-FE56B4423C61}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBC4E139-15C5-4A72-ADFF-B91C72777D74}
