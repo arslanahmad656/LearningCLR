@@ -68,7 +68,7 @@
 			2.3.2.1: AssemblyRef: If the type is defined in another assembly
 			2.3.2.2: ModuleRef: If the type is defined in a different module of the same assembly
 			2.3.2.3: ModuleDef: If the type is defined in the same module
-			2.3.2.4: TypeRef: If the type is implemented in another type
+			2.3.2.4: TypeRef: If the type is implemented within another type
 2.4: MemberRef: Contains one entry for each member (field, method, event, property, everything that is a member of a type) referenced by the module. Each entry contains:
 	2.4.1: Member info (name, type)
 	2.4.2: Index to TypeRef entry with which this member belongs
