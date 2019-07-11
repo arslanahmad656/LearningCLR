@@ -1,0 +1,5 @@
+﻿Use 't[arget]:module' to create a module. The module thus created would not have assembly metadata tables within it.
+If another value is provided for 't[arget]' switch, the compiler will create a module with an assembly manifest (so it would be an assembly).
+Use 'addmodule:<module1>' to make module1 the part of assembly.
+
+See the 'metadata info.png' file.

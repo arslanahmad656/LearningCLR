@@ -44,10 +44,13 @@
     <Compile Include="Examples\CompilingCode\ConflictTest.cs" />
     <Compile Include="Examples\CompilingCode\SameTypeAssemblies\ConflictingAssembly1.cs" />
     <Compile Include="Examples\CompilingCode\SameTypeAssemblies\ConflictingAssembly2.cs" />
+    <Compile Include="Examples\CreatingMultifileAssembly\Type1.cs" />
+    <Compile Include="Examples\CreatingMultifileAssembly\Type2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Examples\CompilingCode\compilingcode.rsp" />
+    <None Include="Examples\CreatingMultifileAssembly\Type1.netmodule" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Examples\CompilingCode\CompilingCodeEx.exe" />
@@ -56,6 +59,10 @@
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\conflict2.dll" />
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\Notes.txt" />
     <Content Include="Examples\CompilingCode\Metadata info.txt" />
+    <Content Include="Examples\CreatingMultifileAssembly\How To.txt" />
+    <Content Include="Examples\CreatingMultifileAssembly\metadat info.png" />
+    <Content Include="Examples\CreatingMultifileAssembly\Type2.dll" />
+    <Content Include="Examples\CreatingMultifileAssembly\Type2WithoutAddModule.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
