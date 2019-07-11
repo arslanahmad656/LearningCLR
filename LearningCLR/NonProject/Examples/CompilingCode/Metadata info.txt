@@ -1,0 +1,82 @@
+﻿The PE produced as a result of compilation (e.g. csc.exe) contains four major parts:
+
+ - PE32(+) header: Standard information about how to execute the assembly. This header is an extended version of COFF header. Hence it can be loaded by Win32 LoadAssembly function.
+ - CLR header: Contains
+				- Version information of target CLR
+				- MethodDef token referring to the entry point if it is an executable (t:exe, t:winexe, t:appcontainerexe)
+				- Strong name information
+				- Size and offsets of metadata tables (described later in the file)
+ - Metadata: Contains several tables most of which fall in one of the following categories:
+				- Definition tables (contains entries for the entities, e.g. methods and types, defined by the code being compiled)
+				- Reference tables (contains the entries for the entities, e.g. assemblies, methods etc., being referred to by the code being compiled)
+				- Manifest tables
+ - IL Code:	The compiled IL (Intermediate Language) code. This code is compiled to native on the fly by JIT compiler.
+
+ *** NOTE: It does not matter how many references (using /r switch) are provided to the compiler, the entries in tables are created only when required.
+		   For example, if an assembly named 'assembly.dll' is provided as reference but it is not referred to by the code being compiled, no entry will be created in the reference table against this assembly.
+
+ =================================================================================================================================================================================================================
+
+ METADATA TABLES
+ ---------------
+
+ 1. Definition Tables: Contains the following types of entries:
+
+ 1.1 ModuleDef: Contains one entry for the module. It contains:
+		1.1.1: Module name's (name and extension, without path)
+		1.1.2: Module verison id (MVID)
+ 1.2 TypeDef: Contains one entry for each type defined in the module. Each entry contains:
+		1.2.1: Type name
+		1.2.2: Base type
+		1.2.3: flags (public, internal, sealed, abstract etc.)
+		1.2.4: Indexes to the members from MethodDef, FieldDef, PropertyDef, EventDef. This enables the CLR know at runtime exactly which members a type defines.
+ 1.3 MethodDef: Contains one entry for each method defined in the module. Each entry contains:
+		1.3.1: Method name
+		1.3.2: Signature
+		1.3.3: Return type
+		1.3.4: Flags (public, static, readonly, etc.)
+		1.3.5: Indexes to entries in ParameterDef if the method has parameters
+		1.3.6: The offset of the IL (compiled method) within the module
+1.4 FieldDef: Contains one entry for each field defined in the module. Each entry contains:
+		1.4.1: Name of field
+		1.4.2: Type of field
+		1.4.3: Flags (public, protected etc.)
+1.5	PropertyDef: Contains one entry for each property defined in the module. Each entry contains:
+		1.5.1: Name of property
+		1.5.2: Indexes to entries in MethodDef table (referring to getter and setter of the property)
+1.6 ParamDef: Contains one entry for each parameter defined in the module. Each entry contains:
+		1.6.1: Name
+		1.6.2: Type
+		1.6.3: Flags (in, out, retVal, ref etc.)
+1.7 EventDef: Contains one entry for each event defined in the module. Each entry contains:
+		1.7.1: Event name
+		1.7.2: Flags (public, private etc.)
+
+
+2. Reference Tables: Contains following types of entries:
+
+2.1: AssemblyRef: Contains one entry for each assembly referred by the module. Each entry contains:
+	2.1.1: Fully qualified name of assembly (simple name, version info, culture, and public key token)
+	2.1.2: Flags
+	2.1.3: Hash value (intended to be checksum but not used by CLR)
+
+2.2: ModuleRef: Contains one entry for each module referred by the module being compiled. This information is used to bind to types defined in the different modules of the same assembly. Each entry contains:
+	2.2.1: Module's name (file name and extension, without path)
+2.3: TypeRef: Contains one entry for each type referred by the module. Each entry contains:
+	2.3.1: Type's name
+	2.3.2: Index of entry where type can be found. This index can refer to one of the following entries:
+			2.3.2.1: AssemblyRef: If the type is defined in another assembly
+			2.3.2.2: ModuleRef: If the type is defined in a different module of the same assembly
+			2.3.2.3: ModuleDef: If the type is defined in the same module
+			2.3.2.4: TypeRef: If the type is implemented in another type
+2.4: MemberRef: Contains one entry for each member (field, method, event, property, everything that is a member of a type) referenced by the module. Each entry contains:
+	2.4.1: Member info (name, type)
+	2.4.2: Index to TypeRef entry with which this member belongs
+
+3. Manifest Tables: TO BE CONTINUED...
+
+=================================================================================================================================================================================================================
+For more information:
+Topic: A Brief Look at Metadata p38
+Chapter 2
+CLR via C# by Jeffrey Richter

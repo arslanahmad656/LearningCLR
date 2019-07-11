@@ -51,10 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Examples\CompilingCode\CompilingCodeEx.exe" />
-    <Content Include="Examples\CompilingCode\Notes.txt" />
+    <Content Include="Examples\CompilingCode\Response File.txt" />
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\conflict1.dll" />
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\conflict2.dll" />
     <Content Include="Examples\CompilingCode\SameTypeAssemblies\Notes.txt" />
+    <Content Include="Examples\CompilingCode\Metadata info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
