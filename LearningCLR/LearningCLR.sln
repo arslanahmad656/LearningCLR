@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compiling Code", "Compiling
 	ProjectSection(SolutionItems) = preProject
 		Examples\Compiling Code\compilingcode.rsp = Examples\Compiling Code\compilingcode.rsp
 		Examples\Compiling Code\CompilingCodeEx.cs = Examples\Compiling Code\CompilingCodeEx.cs
+		Examples\Compiling Code\Notes.txt = Examples\Compiling Code\Notes.txt
 	EndProjectSection
 EndProject
 Global
