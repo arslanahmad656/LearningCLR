@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LearningClr.NonProject.CompilingCode
+namespace LearningClr.NonProject.Examples.CompilingCode
 {
     public class Example
     {

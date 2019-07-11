@@ -1,0 +1,11 @@
+This example is to demonstrate the use of response file.
+Compile the CompilingCodeEx.cs file by issuing the following command on visual studio developers command prompt:
+
+csc.exe /out:app.exe @compilingcode.rsp CompilingCodeEx.cs
+
+---------------------------------------------------------------
+For more information on response files:
+
+Topic: Response Files (Building Types into Modules) p36
+Chapter 2
+CLR via C# by Jeffrey Richter
