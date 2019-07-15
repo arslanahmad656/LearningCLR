@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\AddingAssemblyInfo\Demo.cs" />
     <Compile Include="Examples\AddingResources\AddingIconResource\Program.cs" />
     <Compile Include="Examples\AddingResources\AddingResourceFiles\Executable.cs" />
     <Compile Include="Examples\AddingResources\Executable.cs" />
@@ -62,6 +63,7 @@
     <None Include="Examples\CreatingMultifileAssembly\Type1.netmodule" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\AddingAssemblyInfo\ReadMe.txt" />
     <Content Include="Examples\AddingResources\AddingIconResource\icon.ico" />
     <Content Include="Examples\AddingResources\AddingIconResource\Program.csc.exe" />
     <Content Include="Examples\AddingResources\AddingIconResource\Program2.exe" />
