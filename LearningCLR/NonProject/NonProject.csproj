@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Examples\AddingResources\AddingResourceFiles\Image1.png" />
+    <Content Include="Examples\AddingResources\AddingResourceFiles\program1.exe" />
     <Content Include="Examples\AddingResources\AddingResourceFiles\TextFile1.txt" />
     <Content Include="Examples\AddingResources\Executable_Add_Module.dll" />
     <Content Include="Examples\AddingResources\Executable_CscRes.exe" />
@@ -82,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Examples\AddingResources\AddingResourceFiles\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Examples\AddingResources\AddingIconResource\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
