@@ -50,11 +50,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Examples\AddingResources\Executable.netmodule" />
+    <None Include="Examples\AddingResources\Executable_NoRes.netmodule" />
+    <None Include="Examples\AddingResources\Executable_Res.netmodule" />
     <None Include="Examples\CompilingCode\compilingcode.rsp" />
     <None Include="Examples\CreatingMultifileAssembly\Type1.netmodule" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\AddingResources\Executable_CscRes.exe" />
+    <Content Include="Examples\AddingResources\Executable_ModuleRes.exe" />
+    <Content Include="Examples\AddingResources\Executable_SelfRes.exe" />
     <Content Include="Examples\AddingResources\textfile.txt" />
     <Content Include="Examples\CompilingCode\CompilingCodeEx.exe" />
     <Content Include="Examples\CompilingCode\Response File.txt" />
