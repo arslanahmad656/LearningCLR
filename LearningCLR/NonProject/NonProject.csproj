@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Examples\AddingAssemblyInfo\Demo.netmodule" />
     <None Include="Examples\AddingResources\AddingIconResource\Program.netmodule" />
     <None Include="Examples\AddingResources\AddingIconResource\Program2.netmodule" />
     <None Include="Examples\AddingResources\Executable_NoRes.netmodule" />
@@ -63,6 +64,7 @@
     <None Include="Examples\CreatingMultifileAssembly\Type1.netmodule" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\AddingAssemblyInfo\Program.exe" />
     <Content Include="Examples\AddingAssemblyInfo\ReadMe.txt" />
     <Content Include="Examples\AddingResources\AddingIconResource\icon.ico" />
     <Content Include="Examples\AddingResources\AddingIconResource\Program.csc.exe" />
