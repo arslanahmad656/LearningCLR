@@ -1,0 +1,2 @@
+﻿This is another text file.
+It's purpose also to be emedded as a resouce.
