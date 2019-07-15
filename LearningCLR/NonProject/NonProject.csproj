@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\AddingResources\AddingResourceFiles\Executable.cs" />
     <Compile Include="Examples\AddingResources\Executable.cs" />
     <Compile Include="Examples\CompilingCode\CompilingCodeEx.cs" />
     <Compile Include="Examples\CompilingCode\ConflictTest.cs" />
@@ -56,6 +59,9 @@
     <None Include="Examples\CreatingMultifileAssembly\Type1.netmodule" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\AddingResources\AddingResourceFiles\Image1.png" />
+    <Content Include="Examples\AddingResources\AddingResourceFiles\TextFile1.txt" />
+    <Content Include="Examples\AddingResources\Executable_Add_Module.dll" />
     <Content Include="Examples\AddingResources\Executable_CscRes.exe" />
     <Content Include="Examples\AddingResources\Executable_ModuleRes.exe" />
     <Content Include="Examples\AddingResources\Executable_SelfRes.exe" />
@@ -73,6 +79,9 @@
     <Content Include="Examples\CreatingMultifileAssembly\metadat info.png" />
     <Content Include="Examples\CreatingMultifileAssembly\Type2.dll" />
     <Content Include="Examples\CreatingMultifileAssembly\Type2WithoutAddModule.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Examples\AddingResources\AddingResourceFiles\Resources.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
