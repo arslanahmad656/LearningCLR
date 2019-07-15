@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Examples\AddingResources\AddingIconResource\Program.cs" />
     <Compile Include="Examples\AddingResources\AddingResourceFiles\Executable.cs" />
     <Compile Include="Examples\AddingResources\Executable.cs" />
     <Compile Include="Examples\CompilingCode\CompilingCodeEx.cs" />
@@ -53,12 +54,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Examples\AddingResources\AddingIconResource\Program.netmodule" />
+    <None Include="Examples\AddingResources\AddingIconResource\Program2.netmodule" />
     <None Include="Examples\AddingResources\Executable_NoRes.netmodule" />
     <None Include="Examples\AddingResources\Executable_Res.netmodule" />
     <None Include="Examples\CompilingCode\compilingcode.rsp" />
     <None Include="Examples\CreatingMultifileAssembly\Type1.netmodule" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\AddingResources\AddingIconResource\icon.ico" />
+    <Content Include="Examples\AddingResources\AddingIconResource\Program.csc.exe" />
+    <Content Include="Examples\AddingResources\AddingIconResource\Program2.exe" />
+    <Content Include="Examples\AddingResources\AddingIconResource\ReadMe.txt" />
     <Content Include="Examples\AddingResources\AddingResourceFiles\Image1.png" />
     <Content Include="Examples\AddingResources\AddingResourceFiles\program1.exe" />
     <Content Include="Examples\AddingResources\AddingResourceFiles\TextFile1.txt" />
@@ -84,8 +91,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Examples\AddingResources\AddingResourceFiles\Resources.resx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Examples\AddingResources\AddingIconResource\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
